@@ -1,0 +1,84 @@
+/* 🌊 Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(270deg, #0f172a, #1e3a8a, #2563eb, #38bdf8);
+  background-size: 600% 600%;
+  animation: gradientFlow 12s ease infinite;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 1.5rem; /* 🔵 Smooth edges */
+  margin: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* 🌈 Animated Gradient Background */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 🌀 Logo Styling */
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #f9fafb;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+/* 🧭 Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #f8fafc;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.4rem 0.8rem;
+  border-radius: 1rem;
+}
+
+/* ✨ Hover Glow Animation */
+.nav-links li a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+  transform: scale(1.05);
+}
+
+/* 🟢 Live Status Indicator */
+.status-dot {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #a7f3d0;
+  animation: pulse 1.5s infinite;
+}
+
+/* 💡 Live Dot Animation */
+@keyframes pulse {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* 📱 Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+}
